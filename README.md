@@ -1,4 +1,5 @@
-#Installation
+# Installation
+
 Change directory to server
 Use "npm install" to install all necessary packages
 Use "npm start" to start the app
