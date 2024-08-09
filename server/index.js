@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-app-1-dpjv.onrender.com",
+    origin: "https://chat-app-1-dpjv.onrender.com/",
     methods: ["GET", "POST"],
   },
 });
@@ -31,8 +31,8 @@ io.on("connection", (socket) => {
   });
 });
 
-app.get('/', () => {
-  console.log("Hello World!")
+app.get('/', (req, res) => {
+  res.send("Hello World!")
 })
 
 server.listen(3001, () => {
