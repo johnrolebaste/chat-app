@@ -3,7 +3,10 @@ const app = express();
 const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
-app.use(cors());
+app.use(cors({
+  origin: 'https://chat-app-1-dpjv.onrender.com/',
+  credentials: true
+}));
 
 const server = http.createServer(app);
 
