@@ -4,7 +4,7 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 app.use(cors({
-  origin: 'https://chat-app-1-dpjv.onrender.com/',
+  origin: 'https://chat-app-1-dpjv.onrender.com',
   credentials: true
 }));
 
@@ -12,7 +12,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-app-1-dpjv.onrender.com/",
+    origin: "https://chat-app-1-dpjv.onrender.com",
     methods: ["GET", "POST"],
   },
 });
